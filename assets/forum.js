@@ -17,8 +17,8 @@
     mount: function (el) {
       var card = document.createElement('div');
       card.className = 'overflow-hidden rounded-c border border-line bg-surface shadow-sm';
-      card.innerHTML = '<h4 class="border-b border-line px-4 py-3 text-xs font-semibold uppercase tracking-wide text-ink-muted">' +
-        ((c.trans && c.trans('Upcoming events')) || 'Upcoming events') + '</h4><div class="p-2" data-list></div>';
+      card.innerHTML = '<div class="flex items-center gap-2 border-b border-line bg-primary/10 px-4 py-3"><span class="text-sm leading-none">📅</span><b class="text-[13px] font-bold uppercase tracking-wide text-ink-2">' +
+        ((c.trans && c.trans('Upcoming events')) || 'Upcoming events') + '</b></div><div class="p-2" data-list></div>';
       var list = card.querySelector('[data-list]');
 
       function fmt(iso) {
